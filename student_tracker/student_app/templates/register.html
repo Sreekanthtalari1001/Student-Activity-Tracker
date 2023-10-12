@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <style>
+        /* Reset default browser styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Center the register form vertically and horizontally */
+        .register-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            background-color: #f2f2f2;
+        }
+
+        /* Style the register form */
+        .register-form {
+            width: 500px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style the form heading */
+        .register-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Style form inputs and labels */
+        .register-form input[type="text"],
+        .register-form input[type="password"] {
+            width: 50%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .register-form label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Style the register button */
+        .register-form button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .register-form button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Style login button */
+        .login-button {
+            text-align: center;
+            margin-top: 10px;
+            color: #4CAF50;
+        }
+
+        .login-button a {
+            text-decoration: none;
+            color: #333;
+            
+        }
+    
+    </style>
+
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Register</title>
+    </head>
+    <body>
+       <div class="register-container">
+            <form method="POST" class="register-form">
+                <h2>Register</h2>
+                {{register_form.as_p}}
+                <button id="button1" type="submit">Register</button>
+
+                {% csrf_token %}
+            </form>
+        </div>
+        <div class="login-button"><a href="/../login/"><button style="width: 200px;" style="height:40px" style="background-color: #45a049;">Login</button></a></div>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Student Dashboard</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'dashboard.css' %}" >
+    {% load static %}
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  </head>
+  <style>
+    .nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+
+  .nav-buttons a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    font-family: "Arial", sans-serif;
+  }
+
+  .nav-buttons a:hover {
+    background-color: #45a049;
+  }
+  </style>
+  <body>
+    <div class="container">
+      <h1>{{name}} Dashboard</h1>
+      <div class="summary">
+        <h2>Performance Summary</h2>
+        <p>Total Score: <span id="total-score">0</span></p>
+        <p>Number of Quizzes: <span id="num-quizzes">0</span></p>
+        <p>Average Score: <span id="avg-score">0</span></p>
+      </div>
+      <div class="quiz-results">
+        <h2>Quiz Results</h2>
+        <canvas id="quiz-chart"></canvas>
+        <div class="nav-buttons">
+            <a href="/../home/">Back</a>
+            <a href="/../home/course/">Next</a>
+          </div>
+      </div>
+    </div>
+
+
+    {% load static %}
+    <script type = "module" src="{% static 'dashboard.js' %}"></script>
+  </body>
+</html>

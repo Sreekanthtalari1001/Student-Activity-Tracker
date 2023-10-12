@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Profile</title>
+  <style>
+    /* CSS styles omitted for brevity */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>User Profile</h1>
+
+    <div class="section" id="user-info">
+      <!-- User Information section content -->
+    </div>
+
+    <div class="section" id="general-info" style="display: none;">
+      <!-- General Information section content -->
+    </div>
+
+    <div class="nav-buttons">
+      <a href="/../home/">Back</a>
+      <a href="#" onclick="showGeneralInfo()">More Information</a>
+      <a href="/../home/test/">Next</a>
+    </div>
+
+    <script>
+      function showGeneralInfo() {
+        var generalInfo = document.getElementById("general-info");
+        var moreInfoButton = document.querySelector(".nav-buttons a:nth-child(2)");
+
+        generalInfo.style.display = "block";
+        
+      }
+    </script>
+  </div>
+</body>
+</html>
